@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import "./App.css";
+
+// EXAMPLE
+// To start using the pre-made Ant Design components we must first import them:
+import { Card, Row, Col, Divider, Input, Button } from "antd";
 
 function App() {
+  // After importing the components we can render them directly:
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Row>
+        <Col>
+          <Divider>Fancy Input</Divider>
+          <Input value={""} onChange={() => {}} />
+        </Col>
+
+        <Col>
+          <Card title={"Fancy Card"}>
+            <Button onClick={() => {}}>Fancy Button</Button>
+          </Card>
+        </Col>
+      </Row>
     </div>
   );
+
+  //   {
+  //     /* Simple list Item */
+  //   }
+  //   <div>
+  //     <p> FOOD_NAME_HERE </p>
+  //     <img src="FOOD_IMAGE_HERE" width={0} />
+  //   </div>
 }
 
 export default App;
